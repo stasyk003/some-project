@@ -38,7 +38,7 @@ jobs:
        run: sudo docker ps
        
      - name: Viewing AWS CLI Version 
-       run: aws--version
+       run: aws --version
      
   my-deploy:
     runs-on: ubuntu-latest   
