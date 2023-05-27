@@ -37,6 +37,9 @@ jobs:
      - name: Viewing Docker Containers 
        run: sudo docker ps
        
+     - name: Viewing AWS CLI Version 
+       run: aws--version
+     
   my-deploy:
     runs-on: ubuntu-latest   
     needs: my-testing
