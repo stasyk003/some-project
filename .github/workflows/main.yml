@@ -39,6 +39,9 @@ jobs:
        
      - name: Viewing AWS CLI Version 
        run: aws --version
+       
+     - name: Checking zip 
+       run: zip
      
   my-deploy:
     runs-on: ubuntu-latest   
