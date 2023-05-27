@@ -47,7 +47,6 @@ jobs:
        run: | 
           sudo docker pull mysql 
           sudo docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }} -d mysql
-          sudo docker exec -i mysql-db -u root -p "${{ secrets.MYSQL_ROOT_PASSWORD }}"
           
   my-deploy:
     runs-on: ubuntu-latest   
