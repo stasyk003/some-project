@@ -43,12 +43,12 @@ jobs:
      - name: Viewing Docker Containers 
        run: sudo docker ps
        
-     - name: Viewing AWS CLI Version 
-       run: aws --version
-       
-     - name: Checking zip 
-       run: zip
-     
+     - name: Pull MySQL Image and run container
+       run: | 
+          sudo docker pull mysql 
+          sudo docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }} -d mysql:tag
+          sudo docker exec -i mysql-db -u root -p "${{ secrets.MYSQL_ROOT_PASSWORD }}"
+          
   my-deploy:
     runs-on: ubuntu-latest   
     needs: my-testing
