@@ -47,7 +47,7 @@ jobs:
        run: sudo docker pull mysql 
       
      - name: Run MySQL Container 
-       run: sudo docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=${{ variables.MYSQL_ROOT_PASSWORD }} -d mysql      
+       run: sudo docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }} -d mysql      
        
      - name: Viewing Docker Containers 
        run: sudo docker ps
