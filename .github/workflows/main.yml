@@ -21,6 +21,21 @@ jobs:
           echo "Hello message1"
           echo "Hello message1"
           echo "Application name is ${{ env.APPLICATION_NAME }}"
+          
+     - name: Execute pwd Command
+       run: pwd
+       
+     - name: Execute ls Command
+       run: ls
+       
+     - name: Viewing Docker Version 
+       run: sudo docker --version
+     
+     - name: Viewing Docker Images 
+       run: sudo docker images 
+     
+     - name: Viewing Docker Containers 
+       run: sudo docker ps
        
   my-deploy:
     runs-on: ubuntu-latest   
