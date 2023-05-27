@@ -28,6 +28,12 @@ jobs:
      - name: Execute ls Command
        run: ls
        
+     - name: Checkout code
+       uses: actions/checkout@v3
+       
+     - name: Execute ls Command
+       run: ls
+       
      - name: Viewing Docker Version 
        run: sudo docker --version
      
