@@ -3,7 +3,7 @@ name: GitHub-Actions-Basics
 on:
   push:
     branches:
-      - master
+      - main
       
 jobs:
   my-testing:
