@@ -46,7 +46,7 @@ jobs:
      - name: Pull MySQL Image and run container
        run: | 
           sudo docker pull mysql 
-          sudo docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }} -d mysql:tag
+          sudo docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=${{ secrets.MYSQL_ROOT_PASSWORD }} -d mysql
           sudo docker exec -i mysql-db -u root -p "${{ secrets.MYSQL_ROOT_PASSWORD }}"
           
   my-deploy:
