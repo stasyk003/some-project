@@ -1,9 +1,5 @@
 name: GitHub-Actions-Basics
 
-env:
-  APPLICATION_NAME: "Flask Web App"
-  PACKAGE_NAME: "flask-deploy-${{ github.sha }}"
-  
 on:
   push:
     branches:
@@ -60,10 +56,5 @@ jobs:
     needs: my-testing
     steps:
      - name: Print Hello Message
-       run: echo "Hello, World from deploy"
-    
-     - name: Printing Deployment Package
-       run: echo "Deploy package name is ${{ env.PACKAGE_NAME }}"
-          
-        
+       run: echo "Hello, World from deploy"        
           
